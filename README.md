@@ -1,12 +1,8 @@
-# Sun-setting development
-
-I do not use this extension anymore, so I don't have the motivation to keep maintaining it. If anyone wants to keep it maintained, feel free to contact me and I'll transfer the ownership. You can also try my new extension "Improved Media Controls" instead
-
 ## What does this extension do?
 
 Show controls and information of the currently playing media in the panel.
 
-> This is a fork of [sakithb/media-controls](https://github.com/sakithb/media-controls), maintained at [m-obeid/media-controls](https://github.com/m-obeid/media-controls). All credit for the original work goes to the upstream authors and contributors.
+> This is a fork of [m-obeid/media-controls](https://github.com/m-obeid/media-controls), maintained at [GitPowerInc/rebooted-media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
 
 ## Features
 
