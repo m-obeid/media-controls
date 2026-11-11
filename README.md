@@ -83,8 +83,8 @@ If you are interested in translating, download the [po file](https://github.com/
 
 If you are interested in contributing code. There are no specific guidelines for contributing. Just make sure you follow the coding style of the project. To update the translation files run `pnpm run translations` in the extensions directory after your changes are done. This will update the files in the locale folder.
 
-<a href="https://github.com/m-obeid/media-controls/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=m-obeid/media-controls" />
+<a href="https://github.com/GitPowerInc/rebooted-media-controls/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GitPowerInc/rebooted-media-controls" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
