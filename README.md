@@ -1,12 +1,8 @@
-# Sun-setting development
-
-I do not use this extension anymore, so I don't have the motivation to keep maintaining it. If anyone wants to keep it maintained, feel free to contact me and I'll transfer the ownership. You can also try my new extension "Improved Media Controls" instead
-
 ## What does this extension do?
 
 Show controls and information of the currently playing media in the panel.
 
-> This is a fork of [sakithb/media-controls](https://github.com/sakithb/media-controls), maintained at [m-obeid/media-controls](https://github.com/m-obeid/media-controls). All credit for the original work goes to the upstream authors and contributors.
+> This is a fork of [m-obeid/media-controls](https://github.com/m-obeid/media-controls), maintained at [GitPowerInc/rebooted-media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
 
 ## Features
 
@@ -87,8 +83,8 @@ If you are interested in translating, download the [po file](https://github.com/
 
 If you are interested in contributing code. There are no specific guidelines for contributing. Just make sure you follow the coding style of the project. To update the translation files run `pnpm run translations` in the extensions directory after your changes are done. This will update the files in the locale folder.
 
-<a href="https://github.com/m-obeid/media-controls/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=m-obeid/media-controls" />
+<a href="https://github.com/GitPowerInc/rebooted-media-controls/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GitPowerInc/rebooted-media-controls" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
