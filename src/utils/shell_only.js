@@ -99,7 +99,7 @@ export const getImage = async (url) => {
     const encoder = new TextEncoder();
     const urlBytes = encoder.encode(url);
     const encodedUrl = GLib.base64_encode(urlBytes);
-    const path = GLib.build_filenamev([GLib.get_user_cache_dir(), "mediacontrols@m-obeid.github.com", encodedUrl]);
+    const path = GLib.build_filenamev([GLib.get_user_cache_dir(), "mediacontrols@GitPowerInc.github.com", encodedUrl]);
     const exitCode = GLib.mkdir_with_parents(GLib.path_get_dirname(path), 493);
     if (exitCode === -1) {
         errorLog(`Failed to create cache directory: ${path}`);

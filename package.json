@@ -12,15 +12,15 @@
 
     "build": "pnpm run build:clean && pnpm run build:dirs && pnpm run build:copy && pnpm run build:resources && pnpm run build:pack",
 
-    "ext:install": "gnome-extensions install --force dist/builds/mediacontrols@m-obeid.github.com.shell-extension.zip",
-    "ext:uninstall": "gnome-extensions uninstall mediacontrols@m-obeid.github.com",
-    "ext:enable": "gnome-extensions enable mediacontrols@m-obeid.github.com",
-    "ext:disable": "gnome-extensions disable mediacontrols@m-obeid.github.com",
-    "ext:prefs": "gnome-extensions prefs mediacontrols@m-obeid.github.com",
-    "ext:upload": "gnome-extensions upload --accept-tos --user pocoguy ${EGO_ARGS} dist/builds/mediacontrols@m-obeid.github.com.shell-extension.zip",
+    "ext:install": "gnome-extensions install --force dist/builds/mediacontrols@GitPowerInc.github.com.shell-extension.zip",
+    "ext:uninstall": "gnome-extensions uninstall mediacontrols@GitPowerInc.github.com",
+    "ext:enable": "gnome-extensions enable mediacontrols@GitPowerInc.github.com",
+    "ext:disable": "gnome-extensions disable mediacontrols@GitPowerInc.github.com",
+    "ext:prefs": "gnome-extensions prefs mediacontrols@GitPowerInc.github.com",
+    "ext:upload": "gnome-extensions upload --accept-tos --user pocoguy ${EGO_ARGS} dist/builds/mediacontrols@GitPowerInc.github.com.shell-extension.zip",
 
-    "translations:extract": "xgettext --from-code=UTF-8 --add-comments --join-existing --keyword=_ --keyword=C_:1c,2 --language=Javascript --output=assets/locale/mediacontrols@m-obeid.github.com.pot $(find . -type f \\( -name '*.ui' -o -name '*.js' \\) -not -path './node_modules/*')",
-    "translations:merge": "for po in assets/locale/*.po; do msgmerge -U \"$po\" assets/locale/mediacontrols@m-obeid.github.com.pot; done && rm -f assets/locale/*.po~",
+    "translations:extract": "xgettext --from-code=UTF-8 --add-comments --join-existing --keyword=_ --keyword=C_:1c,2 --language=Javascript --output=assets/locale/mediacontrols@GitPowerInc.github.com.pot $(find . -type f \\( -name '*.ui' -o -name '*.js' \\) -not -path './node_modules/*')",
+    "translations:merge": "for po in assets/locale/*.po; do msgmerge -U \"$po\" assets/locale/mediacontrols@GitPowerInc.github.com.pot; done && rm -f assets/locale/*.po~",
     "translations": "pnpm run translations:extract && pnpm run translations:merge"
   },
   "devDependencies": {
