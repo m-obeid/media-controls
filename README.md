@@ -2,7 +2,7 @@
 
 Show controls and information of the currently playing media in the panel.
 
-> This is a continuation of [@m-obeid](https://github.com/m-obeid/)'s fork of [sakithb/media-controls](https://github.com/sakithb/media-controls) maintained at [GitPowerInc/media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
+> This is a continuation of [@m-obeid](https://github.com/m-obeid/)'s fork of [sakithb/media-controls](https://github.com/sakithb/media-controls), maintained at [GitPowerInc/media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
 
 ## Features
 
