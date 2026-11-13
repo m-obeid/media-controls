@@ -11,8 +11,8 @@ permissions:
   contents: write
 
 jobs:
-  upload:
-    name: Build and upload
+  build:
+    name: Build extension
     runs-on: ubuntu-latest
     if: github.event.release.prerelease == false
     container:
@@ -37,25 +37,58 @@ jobs:
 
       - name: Build extension
         run: pnpm run build
-        
-      - name: Setup Python
+
+      - name: Save ZIPs for validation and publishing
+        uses: actions/upload-artifact@v7
+        with:
+          name: extension-zips
+          path: dist/builds/*.zip
+          if-no-files-found: error
+
+  publish:
+    name: Check and upload release
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event.release.prerelease == false
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+
+      - name: Download built ZIPs
+        uses: actions/download-artifact@v8
+        with:
+          name: extension-zips
+          path: dist/builds
+
+      - name: Set up Python
         uses: actions/setup-python@v7.1.0
         with:
           python-version: '3.12'
-      - name: Verify Python
+
+      - name: Verify Python SSL
+        run: python3 -c 'import ssl; print(ssl.OPENSSL_VERSION)'
+
+      - name: Find the extension ZIP
+        id: package
+        shell: bash
         run: |
-          command -v python3
-          python3 --version
-          python3 -m pip --version
-        
-      - name: shexli CI
+          shopt -s nullglob
+          zips=(dist/builds/*.zip)
+          if (( ${#zips[@]} != 1 )); then
+            printf 'Expected exactly one ZIP; found %d\n' "${#zips[@]}" >&2
+            printf '%s\n' "${zips[@]}" >&2
+            exit 1
+          fi
+          echo "path=${zips[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Shexli CI
         uses: 3v1n0/shexli-ci@v1
         with:
-          path: .
+          path: ${{ steps.package.outputs.path }}
           on-resolved: warn
 
       - name: Attach ZIP to release
         uses: softprops/action-gh-release@v3
         with:
           files: dist/builds/*.zip
-      
