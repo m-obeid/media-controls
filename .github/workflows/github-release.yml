@@ -40,8 +40,19 @@ jobs:
         
       - name: Setup Python
         uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Verify Python
+        run: |
+          command -v python3
+          python3 --version
+          python3 -m pip --version
+        
       - name: shexli CI
         uses: 3v1n0/shexli-ci@v1
+        with:
+          path: .
+          on-resolved: warn
 
       - name: Attach ZIP to release
         uses: softprops/action-gh-release@v3
