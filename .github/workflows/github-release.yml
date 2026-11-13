@@ -38,6 +38,8 @@ jobs:
       - name: Build extension
         run: pnpm run build
         
+      - name: Setup Python
+        uses: actions/setup-python@v7.1.0
       - name: shexli CI
         uses: 3v1n0/shexli-ci@v1
 
