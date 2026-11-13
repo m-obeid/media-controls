@@ -2,7 +2,7 @@
 
 Show controls and information of the currently playing media in the panel.
 
-> This is a fork of [m-obeid/media-controls](https://github.com/m-obeid/media-controls), maintained at [GitPowerInc/rebooted-media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
+> This is a continuation of [@m-obeid](https://github.com/m-obeid/)'s fork of [sakithb/media-controls](https://github.com/sakithb/media-controls) maintained at [GitPowerInc/media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
 
 ## Features
 
@@ -17,7 +17,7 @@ Show controls and information of the currently playing media in the panel.
 
 ## How to install
 
-#### Install from extensions.gnome.org (Recommended)
+#### Install from extensions.gnome.org (Temporarily broken)
 
 [<img src="assets/images/ego.png" height="100">](https://extensions.gnome.org/extension/4470/media-controls/)
 
@@ -83,8 +83,8 @@ If you are interested in translating, download the [po file](https://github.com/
 
 If you are interested in contributing code. There are no specific guidelines for contributing. Just make sure you follow the coding style of the project. To update the translation files run `pnpm run translations` in the extensions directory after your changes are done. This will update the files in the locale folder.
 
-<a href="https://github.com/GitPowerInc/rebooted-media-controls/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GitPowerInc/rebooted-media-controls" />
+<a href="https://github.com/GitPowerInc/media-controls/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GitPowerInc/media-controls" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
