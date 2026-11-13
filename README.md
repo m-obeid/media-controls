@@ -2,7 +2,7 @@
 
 Show controls and information of the currently playing media in the panel.
 
-> This is a continuation of [@m-obeid](https://github.com/m-obeid/)'s fork of [sakithb/media-controls](https://github.com/sakithb/media-controls), maintained at [GitPowerInc/media-controls](https://github.com/GitPowerInc/rebooted-media-controls). All credit for the original work goes to the upstream authors and contributors.
+> This is a continuation of [@m-obeid](https://github.com/m-obeid/)'s fork of [sakithb/media-controls](https://github.com/sakithb/media-controls), maintained at [GitPowerInc/revived-media-controls](https://github.com/GitPowerInc/revived-media-controls). All credit for the original work goes to the upstream authors and contributors.
 
 ## Features
 
@@ -79,12 +79,12 @@ For active development, use `pnpm reload` (X11) or `pnpm debug` (Wayland) to tes
 
 Any type of contribution is appreciated! If you have any suggestions for new features feel free to open a new issue.
 
-If you are interested in translating, download the [po file](https://github.com/GitPowerInc/media-controls/blob/main/assets/locale/mediacontrols@GitPowerInc.github.com.pot) and translate it. Then open a pull request with the translated file. You can use [Gtranslator](https://flathub.org/apps/org.gnome.Gtranslator) or [Poedit](https://flathub.org/apps/net.poedit.Poedit) to translate.
+If you are interested in translating, download the [po file](https://github.com/GitPowerInc/revived-media-controls/blob/main/assets/locale/mediacontrols@GitPowerInc.github.com.pot) and translate it. Then open a pull request with the translated file. You can use [Gtranslator](https://flathub.org/apps/org.gnome.Gtranslator) or [Poedit](https://flathub.org/apps/net.poedit.Poedit) to translate.
 
 If you are interested in contributing code. There are no specific guidelines for contributing. Just make sure you follow the coding style of the project. To update the translation files run `pnpm run translations` in the extensions directory after your changes are done. This will update the files in the locale folder.
 
-<a href="https://github.com/GitPowerInc/media-controls/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GitPowerInc/media-controls" />
+<a href="https://github.com/GitPowerInc/revived-media-controls/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GitPowerInc/revived-media-controls" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
