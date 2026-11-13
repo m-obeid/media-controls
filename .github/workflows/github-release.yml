@@ -37,8 +37,12 @@ jobs:
 
       - name: Build extension
         run: pnpm run build
+        
+      - name: shexli CI
+        uses: 3v1n0/shexli-ci@v1
 
       - name: Attach ZIP to release
         uses: softprops/action-gh-release@v3
         with:
           files: dist/builds/*.zip
+      
