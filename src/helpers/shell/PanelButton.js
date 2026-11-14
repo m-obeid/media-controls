@@ -179,11 +179,11 @@ class PanelButton extends PanelMenu.Button {
         // PropertyTransitions on unmapped actors, so the slider's elapsed
         // time drifts from the player's real position while the menu is
         // closed. Re-fetch the position on open and (re)start the transition.
-        this.menu.connect("open-state-changed", (_, isOpen) => {
+        this.menu.connectObject("open-state-changed", (_, isOpen) => {
             if (isOpen && this.extension.showTrackSlider && this.menuSlider != null) {
                 this.addMenuSlider().catch(errorLog);
             }
-        });
+        },this);
         this.connect("destroy", this.onDestroy.bind(this));
     }
 
@@ -708,9 +708,9 @@ class PanelButton extends PanelMenu.Button {
         const rate = this.playerProxy.rate;
         if (this.menuSlider == null) {
             this.menuSlider = new MenuSlider();
-            this.menuSlider.connect("seeked", (_, position) => {
+            this.menuSlider.connectObject("seeked", (_, position) => {
                 this.playerProxy.setPosition(this.playerProxy.metadata["mpris:trackid"], position);
-            });
+            },this);
         }
         if (position != null && length != null && length > 0) {
             this.menuSlider.setDisabled(false);
