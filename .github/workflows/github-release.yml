@@ -14,7 +14,6 @@ jobs:
   build:
     name: Build extension
     runs-on: ubuntu-latest
-    if: github.event.release.prerelease == false
     container:
       image: ubuntu:26.10
 
@@ -49,7 +48,6 @@ jobs:
     name: Check and upload release
     runs-on: ubuntu-latest
     needs: build
-    if: github.event.release.prerelease == false
 
     steps:
       - name: Check out code
