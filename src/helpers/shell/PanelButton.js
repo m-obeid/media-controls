@@ -297,6 +297,7 @@ class PanelButton extends PanelMenu.Button {
             if (this.extension.showTrackSlider) {
                 this.addMenuSlider().catch(errorLog);
             } else if (this.menuSlider != null) {
+                this.menuSlider.disconnectObject(this);
                 this.menuBox.remove_child(this.menuSlider);
                 this.menuSlider.destroy();
                 this.menuSlider = null;
@@ -1346,6 +1347,8 @@ class PanelButton extends PanelMenu.Button {
      * @returns {void}
      */
     onDestroy() {
+        this.menu?.disconnectObject(this);
+        this.menuSlider?.disconnectObject(this);
         this.removeProxyListeners();
         this.playerProxy = null;
         // Null out references to child widgets before parent destroys them
